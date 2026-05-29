@@ -36,11 +36,11 @@
     --muted: #8a8a8a;
     --line: #232327;
     --line-strong: #ffffff;
-    --accent: #A78BFA;
-    --accent-soft: #2a1f4a;
+    --accent: #FFDD00;
+    --accent-soft: #3a2f0d;
     --on-accent: #0b0b0d;
-    --photo-bg-a: #2a1f4a;
-    --photo-bg-b: #1a1230;
+    --photo-bg-a: #3a2f0d;
+    --photo-bg-b: #2a210a;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -499,7 +499,7 @@
     font-size: 15px;
   }
   .project .visual {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 2.5;
     overflow: hidden;
     position: relative;
     border: 1px solid var(--line);
@@ -547,7 +547,7 @@
       radial-gradient(circle at 70% 70%, var(--bg-soft) 0%, transparent 60%),
       linear-gradient(135deg, var(--bg-soft) 0%, var(--bg) 100%);
   }
-  .preview-lumen::before {
+/*  .preview-lumen::before {
     content: '';
     position: absolute;
     left: 50%; top: 50%;
@@ -568,12 +568,12 @@
     font-size: 32px;
     color: var(--ink);
   }
-
+*/
   .preview-verso {
     background:
       linear-gradient(180deg, var(--bg-soft) 0%, var(--accent-soft) 100%);
   }
-  .preview-verso::before {
+  /*.preview-verso::before {
     content: 'VERSO';
     position: absolute;
     left: 50%; top: 50%;
@@ -591,12 +591,12 @@
     top: 30%; bottom: 30%;
     border-top: 1px solid var(--ink);
     border-bottom: 1px solid var(--ink);
-  }
+  }*/
 
   .preview-field {
     background: linear-gradient(180deg, var(--bg-soft) 0%, var(--accent-soft) 100%);
   }
-  .preview-field::before {
+ /*.preview-field::before {
     content: '';
     position: absolute;
     left: 10%; right: 10%; top: 20%; bottom: 20%;
@@ -612,12 +612,12 @@
     transform: translate(-50%, -50%);
     font-size: 64px;
     color: var(--ink);
-  }
+  }*/
 
   .preview-halcyon {
     background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-soft) 100%);
   }
-  .preview-halcyon::before {
+  /*.preview-halcyon::before {
     content: '';
     position: absolute;
     left: 50%; top: 50%;
@@ -636,7 +636,7 @@
     border-radius: 50%;
     border: 1px solid var(--ink);
     opacity: 0.4;
-  }
+  }*/
 
   /* ------------ INDEX LIST ------------ */
   .index-list { padding: 0 0 40px; }
@@ -684,7 +684,7 @@
     border: 1px solid var(--line);
     overflow: hidden;
   }
-  .about .portrait::before {
+ /* .about .portrait::before {
     content: '';
     position: absolute;
     left: 20%; right: 20%; top: 12%; bottom: 8%;
@@ -692,7 +692,7 @@
       radial-gradient(circle at 50% 35%, var(--accent-soft) 0%, var(--accent-soft) 22%, transparent 22.5%),
       radial-gradient(ellipse at 50% 65%, var(--accent) 0%, var(--accent) 38%, transparent 38.5%),
       linear-gradient(180deg, transparent 0%, transparent 65%, var(--ink) 65%);
-  }
+  }*/
   .about .portrait .frame-label {
     position: absolute;
     bottom: 14px; left: 14px;
@@ -1074,11 +1074,16 @@
     padding-top: 32px;
     margin-top: 16px;
     border-top: 1px solid var(--line);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    gap: 24px;
   }
+  footer .signoff > *:first-child { justify-self: start; text-align: left; }
+  footer .signoff > *:last-child  { justify-self: end;   text-align: right; }
   footer .signoff .big {
+    justify-self: center;
+    text-align: center;
     font-family: var(--serif);
     font-style: italic;
     font-size: 22px;
@@ -1132,7 +1137,6 @@
     </div>
     <ul>
       <li><a href="#work">Work</a></li>
-      <li><a href="#index">Index</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1185,70 +1189,115 @@
   <div class="section-head" id="work">
     <span class="label">02 — Selected Work</span>
     <span class="rule"></span>
-    <span class="count">04 Projects · 2024–2026</span>
+    <span class="count">04 Projects</span>
   </div>
 
   <section class="work">
 
-    <article class="project">
-      <div class="num">001 / 04</div>
+    <article class="project" onclick="document.location='project-claimsforce.html'" >
+      <div class="num">01 / 06</div>
       <div class="info">
-        <h3>Lumen <em>— a calmer bank.</em></h3>
-        <div class="tags"><span>Product Design</span><span>Fintech</span><span>iOS · Android</span><span>2026</span></div>
-        <p>Reimagined a challenger bank's daily-use surface around a single principle: never surprise the user with their own money. Shipped in 14 weeks across iOS and Android.</p>
+        <h3><em>AI claim</em> intake.</h3>
+        <div class="tags"><span>AI</span><span>Insurer-Tech</span><span>Web</span><span>2024</span></div>
+        <p>Teaching an AI to read insurance documents the way our human users do — and shrinking the average claim time.</p>
       </div>
       <div class="visual">
-        <span class="badge">Case Study</span>
-        <div class="preview preview-lumen"></div>
+        <span class="badge">claimsforce</span>
+        <div class="preview preview-lumen">
+          <img src="img/claim-intake/8bUd500IqDvK8vm6a4CPFogCdo.png" width="100%" height="auto" alt="The KI-Entwürfe view: claim drafts the AI prepared overnight, with summary charts at the top." />
+        </div>
         <div class="corner-arrow">↗</div>
       </div>
     </article>
 
-    <article class="project">
-      <div class="num">002 / 04</div>
+    <article class="project" onclick="document.location='project-monese.html'" >
+      <div class="num">02 / 06</div>
       <div class="info">
-        <h3>Verso <em>— editorial CMS.</em></h3>
-        <div class="tags"><span>Product Design</span><span>SaaS</span><span>Web</span><span>2025</span></div>
-        <p>A writing-first content system for independent magazines. Replaced 17 cluttered admin screens with one composition canvas and a typographer's toolbar.</p>
+        <h3>Monese <em>MVP</em> — Banking on the web.</h3>
+        <div class="tags"><span>Fintech</span><span>MVP</span><span>Web</span><span>2020</span></div>
+        <p>Bringing a mobile-first banking app to the browser as a MVP project</p>
       </div>
       <div class="visual">
-        <span class="badge">Case Study</span>
-        <div class="preview preview-verso"></div>
+        <span class="badge">monese</span>
+        <div class="preview preview-verso">
+          <img src="img/monese-webappmvp/Desktop12.png" width="100%" height="auto" alt="Banking on the web - MVP." />
+        </div>
         <div class="corner-arrow">↗</div>
       </div>
     </article>
 
-    <article class="project">
-      <div class="num">003 / 04</div>
+    <article class="project"  onclick="document.location='project-wunder-tasks.html'">
+      <div class="num">03 / 06</div>
       <div class="info">
-        <h3>Field <em>— outdoor goods.</em></h3>
-        <div class="tags"><span>E-commerce</span><span>Brand System</span><span>Web</span><span>2025</span></div>
-        <p>Redesigned the storefront and product configurator for a heritage outdoor brand. Built a modular grid system that flexes from technical spec sheets to magazine-style stories.</p>
+        <h3>Fleet operations management <em>revamped.</em></h3>
+        <div class="tags"><span>Mobility</span><span>Fleet Operations</span><span>Web (App)</span><span>2023</span></div>
+        <p>Rebuilding a long-ignored back-end feature into a map-first tool fleet managers and street operators actually wanted to use</p>
       </div>
       <div class="visual">
-        <span class="badge">Case Study</span>
-        <div class="preview preview-field"></div>
+        <span class="badge">Wunder Mobility</span>
+        <div class="preview preview-halcyon">
+          <img src="img/wm-taskmanagement/cover.png" width="100%" height="auto" alt="Fleet operations." />
+
+        </div>
         <div class="corner-arrow">↗</div>
       </div>
     </article>
 
-    <article class="project">
-      <div class="num">004 / 04</div>
+    <article class="project" onclick="document.location='project-monese-improvements.html'">
+      <div class="num">04 / 06</div>
       <div class="info">
-        <h3>Halcyon <em>— a slower app.</em></h3>
-        <div class="tags"><span>Product Design</span><span>Wellness</span><span>iOS</span><span>2024</span></div>
-        <p>A meditation companion designed around one daily session, no streaks, no notifications. Featured by Apple in Wellness Worth Trying, Q4 2024.</p>
+
+        <h3>Monese <em>MVP</em> webapp <em>improvements</em> </h3>
+        <div class="tags"><span>MVP Iterations</span><span>Fintech</span><span>Web App</span><span>2020</span></div>
+        <p>Powering up MVP released version with iterations after colleting users feedback.</p>
       </div>
       <div class="visual">
-        <span class="badge">Case Study</span>
-        <div class="preview preview-halcyon"></div>
+        <span class="badge">Monese</span>
+        <div class="preview preview-halcyon">
+                    <img src="img/monese-improvements/cover2.jpg" width="100%" height="auto" alt="Web App V2." />
+        </div>
         <div class="corner-arrow">↗</div>
       </div>
     </article>
+
+    <article class="project" onclick="document.location='project-wunder.html'">
+      <div class="num">05 / 06</div>
+      <div class="info">
+        <h3>Mobility Subscription Plans <em>— enabling user engagement.</em></h3>
+        <div class="tags"><span>User engagement</span><span>Mobility</span><span>iOS/Android</span><span>2022</span></div>
+        <p>Adding a white-label subscription model to a mobility platform — letting one feature scale across operators offering cars, bikes and kick-scooters, without becoming an agency for any of them</p>
+      </div>
+      <div class="visual">
+        <span class="badge">Wunder Mobility</span>
+        <div class="preview preview-halcyon">
+          <img src="img/wm-subscription/cover.png" width="100%" height="auto" alt="Web App V2." />
+        </div>
+        <div class="corner-arrow">↗</div>
+      </div>
+    </article>
+
+
+    <article class="project" onclick="document.location='project-remote-assessment.html'" >
+      <div class="num">06 / 06</div>
+      <div class="info">
+        <h3>Damage <em>Remote Assessment.</em></h3>
+        <div class="tags"><span>Remote</span><span>Insurer-Tech</span><span>Web</span><span>2023</span></div>
+        <p>Bringing Germany's most analog industry into a remote-first workflow — letting insurance adjusters evaluate damage by video call assessment.</p>
+      </div>
+      <div class="visual">
+        <span class="badge">claimsforce</span>
+        <div class="preview preview-field">
+          <img src="img/remote-damage/qP5svO3B3ye3O1sSuhsg7m5MDmo.jpg" width="100%" height="auto" alt="Video Call damage assessment." />
+        </div>
+        <div class="corner-arrow">↗</div>
+      </div>
+    </article>
+
+    
 
   </section>
 
-  <!-- INDEX LIST -->
+  <!-- INDEX LIST 
   <div class="section-head" id="index">
     <span class="label">03 — Index of Work</span>
     <span class="rule"></span>
@@ -1265,62 +1314,65 @@
     <div class="index-row"><span class="num">007</span><span class="title">Studio Atelier 04</span><span class="type">Brand · Identity</span><span class="year">2023</span><span class="arrow">→</span></div>
     <div class="index-row"><span class="num">008</span><span class="title">Postmark Mail</span><span class="type">Product · Beta</span><span class="year">2022</span><span class="arrow">→</span></div>
     <div class="index-row"><span class="num">009</span><span class="title">Olá Café</span><span class="type">Identity · Web</span><span class="year">2021</span><span class="arrow">→</span></div>
-  </section>
+  </section> -->
 
   <!-- MARQUEE -->
   <div class="marquee">
     <div class="marquee-track">
-      <span>Available for Spring 2026</span>
+      <span>Product design</span>
       <span class="star">✺</span>
-      <span>Product design &amp; design partnership</span>
+      <span>Design Thinking</span>
       <span class="star">✺</span>
-      <span>Available for Spring 2026</span>
+      <span>User Experience</span>
       <span class="star">✺</span>
-      <span>Product design &amp; design partnership</span>
+      <span>Research</span>
       <span class="star">✺</span>
-      <span>Available for Spring 2026</span>
+      <span>Vibe coding</span>
       <span class="star">✺</span>
-      <span>Product design &amp; design partnership</span>
+      <span>Product Management</span>
+      <span class="star">✺</span>
+      <span>Leadership</span>
       <span class="star">✺</span>
     </div>
   </div>
 
   <!-- ABOUT -->
   <div class="section-head" id="about">
-    <span class="label">04 — About</span>
+    <span class="label">03 — About</span>
     <span class="rule"></span>
     <span class="count">Bio · Stats · Approach</span>
   </div>
 
   <section class="about">
     <div class="portrait">
+      <img src="profile.png" width="auto" height="100%" alt="Jefferson Bessa Photo">
       <span class="frame-label">J.B. — 2026</span>
       <span class="frame-label">35mm · Berlin</span>
     </div>
     <div class="bio">
-      <h2>Eight years of <em>shipping</em> &mdash; mostly the parts you don't see.</h2>
-      <p>I started out in editorial design, learned to code, and somewhere along the way fell in love with the unglamorous middle of a product — empty states, settings screens, the third onboarding step.</p>
-      <p>I work best with small teams who care about craft and aren't precious about it. I draw a lot. I write specs that nobody hates. I send a Loom when an email won't do.</p>
-      <p>Before going independent in 2023, I led design at <em>Stoa</em> and worked on platform tooling at <em>Notion</em>.</p>
+      <h2>Many years of <em>shipping</em> products worldwide <small>(Brazil, Estonia, UK, Germany)</small>.</h2>
+      <p>I'm a dedicated product designer with the mission of crafting practical solutions that seamlessly align with the needs of both users and businesses. With over a decade of experience as a Product Designer and Product Person, I've led cross-functional teams in crafting end-to-end design solutions. </p>
+      <p> Specializing in user-centric design, I've championed the creation of digital products that seamlessly blend form and function. Leveraging my expertise in user research, 
+        prototyping, and collaboration, I've driven the development of intuitive interfaces and immersive user experiences. </p>
       <div class="stats">
         <div class="stat">
-          <div class="n"><em>08</em></div>
+          <div class="n"><em>+10</em></div>
           <div class="l">Years designing<br/>digital products</div>
         </div>
         <div class="stat">
-          <div class="n"><em>34</em></div>
+          <div class="n"><em>Multiple</em></div>
           <div class="l">Products shipped<br/>to production</div>
         </div>
         <div class="stat">
-          <div class="n"><em>02</em></div>
-          <div class="l">Apple feature<br/>placements</div>
+          <div class="n">🤓</div>
+          <div class="l">Product &<br/> Design person</div>
         </div>
       </div>
 
-      <a href="portfolio.pdf" class="pdf-link" download>
+      <a target="_blank" href="https://drive.google.com/file/d/1rds69Y-DVWo2R5sAgaW3u66ItnliO9ly/view" class="pdf-link" download>
         <span class="pdf-arrow">↓</span>
-        <span class="pdf-title"><em>Portfolio.pdf</em> Case studies &amp; process notes</span>
-        <span class="pdf-meta">2026 · 12.4&nbsp;MB</span>
+        <span class="pdf-title"><em>Download CV.pdf</em></span>
+        <span class="pdf-meta">2026</span>
         <span class="pdf-go">→</span>
       </a>
     </div>
@@ -1328,7 +1380,7 @@
 
   <!-- SKILLS -->
   <div class="section-head" id="skills-head">
-    <span class="label">05 — Skills &amp; Competencies</span>
+    <span class="label">04 — Skills &amp; Competencies</span>
     <span class="rule"></span>
     <span class="count">18 disciplines · And counting</span>
   </div>
@@ -1443,7 +1495,7 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="kicker">— 06 · Get in touch</div>
+    <div class="kicker">— 05 · Get in touch</div>
     <h2>Building something <em>quiet?</em><br/>Let's talk.</h2>
     <a href="mailto:jeffbessa@gmail.com" class="email">
       <span class="dot"></span>
