@@ -1057,6 +1057,12 @@
     transition: background 0.3s;
   }
   .contact .email:hover .dot { background: var(--on-accent); }
+  .contact .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 
   /* ------------ FOOTER ------------ */
   footer {
@@ -1177,7 +1183,6 @@
         <span class="corner-tr"></span>
         <span class="corner-bl"></span>
         <span class="corner-br"></span>
-        <span class="photo-id">J.B. / 01</span>
         <span class="photo-label">Jefferson Bessa · 2026</span>
       </div>
     </div>
@@ -1194,17 +1199,33 @@
   <div class="section-head" id="work">
     <span class="label">02 — Selected Work</span>
     <span class="rule"></span>
-    <span class="count">06 Projects</span>
+    <span class="count">07 Projects</span>
   </div>
 
   <section class="work">
 
+    <article class="project" onclick="document.location='project-claimsforce-assessment.html'" >
+      <div class="num">01 / 07</div>
+      <div class="info">
+        <h3>Claim <em>Assessment,</em> in your pocket.</h3>
+        <div class="tags"><span>Mobile</span><span>Insurer-Tech</span><span>iOS/Android/Windows</span><span>2025/2026</span></div>
+        <p>Giving field adjusters a mobile-first tool to assess damage on-site — capturing photos, measurements and notes in one flow, even offline.</p>
+      </div>
+      <div class="visual">
+        <span class="badge">claimsforce</span>
+        <div class="preview preview-field">
+          <video src="img/claimsforce-mobile/image00.mp4" poster="img/claimsforce-mobile/cover.jpg" autoplay muted loop playsinline aria-label="Claim Assessment mobile app — animated cover." style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <div class="corner-arrow">↗</div>
+      </div>
+    </article>
+
     <article class="project" onclick="document.location='project-claimsforce.html'" >
-      <div class="num">01 / 06</div>
+      <div class="num">02 / 07</div>
       <div class="info">
         <h3><em>AI claim</em> intake.</h3>
         <div class="tags"><span>AI</span><span>Insurer-Tech</span><span>Web</span><span>2024</span></div>
-        <p>Teaching an AI to read insurance documents the way our human users do — and shrinking the average claim time.</p>
+        <p>Teaching AI to read insurance documents the way our human users do — and shrinking the average claim time entry.</p>
       </div>
       <div class="visual">
         <span class="badge">claimsforce</span>
@@ -1216,7 +1237,7 @@
     </article>
 
     <article class="project" onclick="document.location='project-monese.html'" >
-      <div class="num">02 / 06</div>
+      <div class="num">03 / 07</div>
       <div class="info">
         <h3>Monese <em>MVP</em> — Banking on the web.</h3>
         <div class="tags"><span>Fintech</span><span>MVP</span><span>Web</span><span>2020</span></div>
@@ -1232,7 +1253,7 @@
     </article>
 
     <article class="project"  onclick="document.location='project-wunder-tasks.html'">
-      <div class="num">03 / 06</div>
+      <div class="num">04 / 07</div>
       <div class="info">
         <h3>Fleet operations management <em>revamped.</em></h3>
         <div class="tags"><span>Mobility</span><span>Fleet Operations</span><span>Web (App)</span><span>2023</span></div>
@@ -1249,7 +1270,7 @@
     </article>
 
     <article class="project" onclick="document.location='project-monese-improvements.html'">
-      <div class="num">04 / 06</div>
+      <div class="num">05 / 07</div>
       <div class="info">
 
         <h3>Monese <em>MVP</em> webapp <em>improvements</em> </h3>
@@ -1266,7 +1287,7 @@
     </article>
 
     <article class="project" onclick="document.location='project-wunder.html'">
-      <div class="num">05 / 06</div>
+      <div class="num">06 / 07</div>
       <div class="info">
         <h3>Mobility Subscription Plans <em>— enabling user engagement.</em></h3>
         <div class="tags"><span>User engagement</span><span>Mobility</span><span>iOS/Android</span><span>2022</span></div>
@@ -1283,7 +1304,7 @@
 
 
     <article class="project" onclick="document.location='project-remote-assessment.html'" >
-      <div class="num">06 / 06</div>
+      <div class="num">07 / 07</div>
       <div class="info">
         <h3>Damage <em>Remote Assessment.</em></h3>
         <div class="tags"><span>Remote</span><span>Insurer-Tech</span><span>Web</span><span>2023</span></div>
@@ -1298,7 +1319,7 @@
       </div>
     </article>
 
-    
+
 
   </section>
 
@@ -1350,7 +1371,7 @@
 
   <section class="about">
     <div class="portrait">
-      <img src="profile.png" width="auto" height="100%" alt="Jefferson Bessa Photo">
+      <img src="profile.jpg" width="auto" height="100%" alt="Jefferson Bessa Photo">
       <span class="frame-label">J.B. — 2026</span>
       <span class="frame-label">35mm · Berlin</span>
     </div>
@@ -1502,18 +1523,25 @@
   <section class="contact" id="contact">
     <div class="kicker">— 05 · Get in touch</div>
     <h2>Building something?<br/><em>Let's talk</em>.</h2>
-    <a href="mailto:jeffbessa@gmail.com" class="email">
-      <span class="dot"></span>
-      jeffbessa@gmail.com
-      <span>↗</span>
-    </a>
+    <div class="links">
+      <a href="mailto:jeffbessa@gmail.com" class="email">
+        <span class="dot"></span>
+        jeffbessa@gmail.com
+        <span>↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/jefferson-bessa/" class="email" target="_blank" rel="noopener">
+        <span class="dot"></span>
+        LinkedIn
+        <span>↗</span>
+      </a>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="signoff">
       <span>Jefferson T. Bessa</span>
-      <span class="big">Designed with café e pão de queijo</span>
+      <span class="big">Designed with AI, café e pão de queijo</span>
       <span>© All rights reserved</span>
     </div>
   </footer>

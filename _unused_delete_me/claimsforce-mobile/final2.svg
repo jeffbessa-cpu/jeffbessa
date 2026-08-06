@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#fafaf7"/>
+  <rect x="1" y="1" width="1598" height="998" fill="none" stroke="#e5e5e3" stroke-width="2" stroke-dasharray="10 8"/>
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="800" y="490" font-size="71" font-style="italic" fill="#7B2CFF">Final 02</text>
+    <text x="800" y="530" font-family="monospace" font-size="16" letter-spacing="1" fill="#6b6b6b">PLACEHOLDER — final screen</text>
+  </g>
+</svg>
